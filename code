@@ -1,0 +1,31 @@
+import math #methods which is used in the squrt function
+
+def fact (num): #factorial function which is called in main function
+  f=1
+  for i in range (1,num+1): #loop inclusive of 1 exclusive of num+1
+    f=f*i
+    print(f)
+
+def cube(num): #cube function
+  cubed=num**3 
+  print("Your number cubed is ",round(cubed,2))#rounds number to two decimal places
+
+def sqarer (num):#sqrt function using the import math methods
+  square=math.sqrt(num)
+  print("The square root of your number is ", round(square,2))
+
+def main(): #main function where input is taken
+  num=int(input("Enter a number\n"))
+  cube(num)#calling upon function
+  sqarer(num)
+  fact(num)
+  repeat=input("Would you like to do another number? yes/ no\n")
+  if repeat=='yes': #repeats to main
+    main()
+  else: #exits program
+    print("")
+    exit()
+main()
+
+
+
